@@ -4,6 +4,7 @@ package org.distribution.client;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -13,6 +14,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan({"org.distribution.client"})//("org.distribution.rest.repository")
 //@Import(value={RestRepositoryBean.class})
 @EnableAutoConfiguration(exclude={WebMvcAutoConfiguration.class})
+@EnableConfigurationProperties
 public class DistributionClientApplication {
 
 
