@@ -19,7 +19,7 @@ public class SpringDataRestRepositoryOperations<T> extends SpringDataRestReposit
 	private String endPoint;
 	
 	private final String httpsBaseURLBuilder = "https://%s:%s";
-	private final String httpBaseURLBuilder  = "https://%s:%s";
+	private final String httpBaseURLBuilder  = "http://%s:%s";
 	
 	private final String listUrlBuilder = "%s/%ss";
 	private final String getForIdUrlBuilder = "%s/%ss/%d";
