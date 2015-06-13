@@ -47,7 +47,7 @@
 	            params.page = params._page - 1;
 	            params.size = params._perPage;
 	            
-	            if 
+	            //if 
 	            params.sort = params._sortField + "," + params._sortDir
 	            
 	            delete params._page;
@@ -101,6 +101,7 @@
 			if (operation === "getList") {
 				// .. and handle the data and meta data
 				extractedData = data._embedded.computers;
+				response.totalCount = response.data.page.totalElements;
 			} else {
 				extractedData = data;
 			}
