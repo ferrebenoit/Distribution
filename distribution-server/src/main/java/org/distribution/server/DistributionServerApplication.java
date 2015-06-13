@@ -12,7 +12,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
 @ComponentScan("org.distribution")
-@EnableJpaRepositories(basePackages = {"org.distribution.common.repository"})
+@EnableJpaRepositories(basePackages = {"org.distribution.jpa.repository"})
 @SpringBootApplication
 //@Import(RepositoryRestMvcConfiguration.class)
 @Import(IDConfiguration.class)
