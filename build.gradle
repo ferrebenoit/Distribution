@@ -6,14 +6,35 @@ allprojects {
 } 
 
 subprojects {
+	project.ext {
+        springBootVersion = '1.2.3.RELEASE'
+    }
+    buildscript {
+	    repositories {
+	        maven { url "http://repo.spring.io/libs-release" }
+	        mavenLocal()
+	        mavenCentral()
+	    }
+	    
+	    dependencies {
+	        classpath("org.springframework.boot:spring-boot-gradle-plugin:$project.ext.springBootVersion")
+	    }
+	}
+   
+   	repositories {
+	    mavenLocal()
+	    mavenCentral()
+	    maven { url "https://repo.spring.io/libs-release" }
+	    maven { url "https://repository.jboss.org/nexus/content/repositories/releases" }
+	    maven { url "http://mvnrepository.com/" }
+	}
     apply plugin: 'java'
      
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
-	project.ext {
-        springBootVersion = '1.2.3.RELEASE'
-    }
+
+    
     
 }
 
