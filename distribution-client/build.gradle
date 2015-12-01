@@ -9,7 +9,8 @@ jar {
 }
 
 dependencies {
-	compile("org.apache.commons:commons-exec:1.3")
+	//compile("org.apache.commons:commons-exec:1.3")
+
     compile("org.springframework.boot:spring-boot-starter:$project.ext.springBootVersion")
     //compile("org.springframework:spring-web:$project.ext.springBootVersion")
     //compile("com.fasterxml.jackson.core:jackson-databind")

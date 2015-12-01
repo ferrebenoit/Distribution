@@ -97,10 +97,13 @@
 			console.log('**addResponseInterceptor***');
 			
 			var extractedData;
+
 			// .. to look for getList operations
-			if (operation === "getList") {
+			if (operation == "getList") {
 				// .. and handle the data and meta data
-				extractedData = data._embedded.computers;
+				if (data.page.totalElements > 0)
+					extractedData = data._embedded.computers;
+				
 				response.totalCount = response.data.page.totalElements;
 			} else {
 				extractedData = data;

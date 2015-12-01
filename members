@@ -19,6 +19,8 @@ Application
 	String name
 	String version
 	
+	set<InstallationItem>
+	
 	set<Commands> installCommands 
 	set<Commands> updateCommands
 	set<Commands> UninstallCommands
@@ -33,6 +35,85 @@ Application
 
 	URI sourceFiles
 
+Action
+InstallationItem
+	install()
+	update()
+	remove()
+	
+	isConfiguration
+	or
+	InstallationItemType (configure, core, )
+
+DefaultEnabledAction (interface)	(current, default user, all users,specific user)
+	isInDefaultProfile
+		
+OSPaths
+	getUser(default/username/allusers)
+	getUserDesktop(default/username/allusers)		
+		
+new ActionLink(, Path+"photophiltre\photophiltre.exe")	
+ActionLink <-	DefaultEnabledAction
+	fileName()
+	comment()
+	currentDirectory()
+	isInDefaultProfile
+	Path()
+	Desktop()
+	StartMenu()
+	
+
+	
+RegistryAction <- Action 	
+MachineRegistryAction <-	RegistryAction
+UserRegistryAction <-	DefaultEnabledAction <- RegistryAction
+	Key
+	Value
+	
+InstallationItemAppdata <-	DefaultEnabledAction
+	isInDefaultProfile
+	
+	
+InstallationItemEXE <-	Action
+	sourceURL
+	
+InstallationItemMSI <-	Action
+	sourceURL
+	properties
+	type ui basic/null
+	
+InstallationItemNullsoft <-	Action
+	sourceURL
+		
+InstallationItemDriver <-	Action
+	sourceURL
+InstallationItemDriverSignature <-	Action
+	sourceURL
+	
+InstallationItemFiles <-	DefaultEnabledAction<-	Action
+	sourceURL
+	DestPath
+	
+InstallationItemZip <-	DefaultEnabledAction<-	Action
+	sourceURL
+	DestPath
+	
+InstallationItemPrinterPort <-	Action
+	
+InstallationItemPrinter <-	Action
+	
+InstallationItemSharedPrinter <-	Action
+	
+InstallationItemDelprof <-	Action
+	
+InstallationItemCommand <-	Action
+	
+InstallationItemPlannedTask <-	Action
+	
+	
+	
+Action
+	ActionType actionType (shortcut, registry, file, delprof...)
 
 Computers
 	String name
