@@ -1,3 +1,6 @@
+/**
+ * 
+ */
 package org.distribution;
 
 import javax.persistence.CascadeType;
@@ -9,10 +12,14 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+/**
+ * @author ben
+ *
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
-public class Command {
-
+abstract public class Action {
+	
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
@@ -20,11 +27,15 @@ public class Command {
 	@ManyToOne(cascade = CascadeType.ALL)
 	private Application application;
 	
-	private CommandType type;
-	private Integer index;
+	private ActionType actionType;
+
+	abstract public ActionResult doIt();
+	abstract public ActionResult update();
+	abstract public ActionResult revert();
 	
-	private String executablePath;
-	private String Args;
+	public ActionType getActionType() {
+		return actionType;
+	}
 	
 	/**
 	 * @return the id
@@ -38,30 +49,5 @@ public class Command {
 	public Application getApplication() {
 		return application;
 	}
-	/**
-	 * @return the type
-	 */
-	public CommandType getType() {
-		return type;
-	}
-	/**
-	 * @return the index
-	 */
-	public Integer getIndex() {
-		return index;
-	}
-	/**
-	 * @return the executablePath
-	 */
-	public String getExecutablePath() {
-		return executablePath;
-	}
-	/**
-	 * @return the args
-	 */
-	public String getArgs() {
-		return Args;
-	}
-	
 	
 }

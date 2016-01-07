@@ -37,7 +37,7 @@ public class Appc {
        	for (Application application : applicationPagedResources.getContent()) {
     		System.out.println("ID      = " + application.getId());
     		System.out.println("Name    = " + application.getName());
-    		System.out.println("Command = " + application.getInstallCommands());
+    		System.out.println("Actions = " + application.getActions());
     	}
     	
     	System.out.println("List Size   " + applicationPagedResources.getContent().size());

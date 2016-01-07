@@ -15,6 +15,7 @@ dependencies {
     //compile("org.springframework:spring-web:$project.ext.springBootVersion")
     //compile("com.fasterxml.jackson.core:jackson-databind")
     compile project(":distribution-rest-repository")
+    compile project(":distribution-action")
     
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.distribution.action;
+package org.distribution;
 
 /**
  * @author ben

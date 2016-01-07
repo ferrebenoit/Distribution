@@ -8,8 +8,10 @@ jar {
 
 dependencies {
 //	compile("org.springframework.boot:spring-boot-starter-web:$project.ext.springBootVersion")
-//	compile("org.springframework.boot:spring-boot-starter-data-jpa:$project.ext.springBootVersion")
-	compile("org.springframework.boot:spring-boot-starter-data-rest:$project.ext.springBootVersion")
+
+	compile("org.springframework.boot:spring-boot-starter-data-jpa:$project.ext.springBootVersion")
+//	compile("org.springframework.boot:spring-boot-starter-data-rest:$project.ext.springBootVersion")
+
 //    testCompile("org.springframework.boot:spring-boot-starter-test:$project.ext.springBootVersion")
 }
 

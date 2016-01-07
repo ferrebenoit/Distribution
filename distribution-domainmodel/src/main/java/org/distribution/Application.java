@@ -31,7 +31,7 @@ public class Application {
 	private Set<Installation> installations;
 	
 	@OneToMany(mappedBy = "application")
-	private Set<Command> installCommands;
+	private Set<Action> Actions;
 
 	@ManyToOne
 	private Application parent;
@@ -73,8 +73,8 @@ public class Application {
 	/**
 	 * @return the installCommands
 	 */
-	public Set<Command> getInstallCommands() {
-		return installCommands;
+	public Set<Action> getActions() {
+		return Actions;
 	}
 
 	/**

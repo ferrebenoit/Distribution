@@ -1,4 +1,4 @@
-package org.distribution.action;
+package org.distribution;
 
 public enum ActionType {
 	CONFIGURE (1),

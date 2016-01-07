@@ -3,7 +3,7 @@ package org.distribution.client;
 import javax.validation.constraints.NotNull;
 
 import org.distribution.rest.repository.ApplicationRestRepository;
-import org.distribution.rest.repository.CommandRestRepository;
+import org.distribution.rest.repository.ActionRestRepository;
 import org.distribution.rest.repository.ComputerRestRepository;
 import org.distribution.rest.repository.InstallationRestRepository;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -29,8 +29,8 @@ public class RestRepositoryBean {
 	}
 	
 	@Bean
-	public CommandRestRepository commandRepository() {
-		return new CommandRestRepository(securedConnexion, host, port);
+	public ActionRestRepository commandRepository() {
+		return new ActionRestRepository(securedConnexion, host, port);
 	}
 	
 	@Bean
