@@ -1,0 +1,12 @@
+apply plugin: 'spring-boot' 
+description = 'Ngadmin Files'
+
+jar {
+	baseName = 'distribution-web-ngadmin'
+	version = '0.0.1-SNAPSHOT'
+}
+
+
+dependencies {
+}
+

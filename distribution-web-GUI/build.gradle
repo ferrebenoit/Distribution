@@ -1,0 +1,12 @@
+apply plugin: 'spring-boot' 
+description = 'Main GUI'
+
+jar {
+	baseName = 'distribution-web-GUI'
+	version = '0.0.1-SNAPSHOT'
+}
+
+
+dependencies {
+}
+
