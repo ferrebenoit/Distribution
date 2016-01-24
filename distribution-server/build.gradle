@@ -10,7 +10,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa:$project.ext.springBootVersion")
     compile("org.springframework.boot:spring-boot-starter-data-rest:$project.ext.springBootVersion")
     compile("com.h2database:h2")
-	compile project(":distribution-domainmodel")
+	compile project(":distribution-domainmodel-jpa")
 	compile project(":distribution-controller")
 	compile project(":distribution-web-thymeleaf")
 	

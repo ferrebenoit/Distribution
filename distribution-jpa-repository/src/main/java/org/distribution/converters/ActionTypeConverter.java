@@ -6,7 +6,7 @@ package org.distribution.converters;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-import org.distribution.ActionType;;
+import org.distribution.jpa.entity.ActionType;;
 
 /**
  * @author ben

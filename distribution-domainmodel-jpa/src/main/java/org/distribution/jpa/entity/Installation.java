@@ -1,9 +1,17 @@
 /**
  * 
  */
-package org.distribution;
+package org.distribution.jpa.entity;
 
 import java.util.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
@@ -11,12 +19,19 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 public class Installation {
 
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "COMPUTER_ID")
 	private Computer computer;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "APPLICATION_ID")
 	private Application application;
 	
 	private InstallState state;

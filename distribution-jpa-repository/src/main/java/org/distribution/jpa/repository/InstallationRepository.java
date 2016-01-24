@@ -3,7 +3,7 @@
  */
 package org.distribution.jpa.repository;
 
-import org.distribution.Installation;
+import org.distribution.jpa.entity.Installation;
 import org.distribution.repository.jdbc.RepositoryJDBC;
 
 /**

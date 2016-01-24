@@ -1,6 +1,6 @@
 package org.distribution.jpa.repository;
 
-import org.distribution.Computer;
+import org.distribution.jpa.entity.Computer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;

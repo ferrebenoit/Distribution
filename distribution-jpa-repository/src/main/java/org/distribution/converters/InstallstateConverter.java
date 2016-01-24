@@ -6,7 +6,7 @@ package org.distribution.converters;
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 
-import org.distribution.InstallState;
+import org.distribution.jpa.entity.InstallState;
 
 /**
  * @author ben

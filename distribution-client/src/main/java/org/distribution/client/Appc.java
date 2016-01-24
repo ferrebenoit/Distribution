@@ -32,7 +32,7 @@ public class Appc {
 		applicationPagedResources = applicationRestRepository.getList();
 		
 		
-    	System.out.println(applicationPagedResources.getContent().iterator().next().getClass());
+    	//System.out.println(applicationPagedResources.getContent().iterator().next().getClass());
 
        	for (Application application : applicationPagedResources.getContent()) {
     		System.out.println("ID      = " + application.getId());

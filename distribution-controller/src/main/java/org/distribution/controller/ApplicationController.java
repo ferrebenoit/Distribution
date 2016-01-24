@@ -3,7 +3,7 @@
  */
 package org.distribution.controller;
 
-import org.distribution.Application;
+import org.distribution.jpa.entity.Application;
 import org.distribution.jpa.repository.ApplicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

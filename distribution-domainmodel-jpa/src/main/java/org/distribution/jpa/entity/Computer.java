@@ -1,6 +1,14 @@
-package org.distribution;
+package org.distribution.jpa.entity;
 
 import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
@@ -8,13 +16,18 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 public class Computer {
 
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+	//@Column(name = "COMPUTER_ID")
 	private long id;
 	
 	private String name;
 	private String macAddress;
 	
+	@OneToMany(mappedBy = "computer")
 	private Set<Installation> installations;
 	
 	/**
@@ -44,13 +57,6 @@ public class Computer {
 
 	public void setMacAddress(String macAddress) {
 		this.macAddress = macAddress;
-	}
-
-	/**
-	 * @return the installations
-	 */
-	public Set<Installation> getInstallations() {
-		return installations;
 	}
 	
 	

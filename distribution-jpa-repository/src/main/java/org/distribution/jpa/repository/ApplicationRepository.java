@@ -5,7 +5,7 @@ package org.distribution.jpa.repository;
 
 import java.util.List;
 
-import org.distribution.Application;
+import org.distribution.jpa.entity.Application;
 import org.distribution.repository.jdbc.RepositoryJDBC;
 import org.springframework.data.repository.query.Param;
 

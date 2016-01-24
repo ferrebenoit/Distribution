@@ -1,6 +1,14 @@
-package org.distribution;
+package org.distribution.jpa.entity;
 
 import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
@@ -8,19 +16,27 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 public class Application {
 	
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+	//@Column(name = "APPLICATION_ID")
 	private long id;
 	
 	private String name;
 	private String version;
 	
+	@OneToMany(mappedBy = "application")
 	private Set<Installation> installations;
 	
+	@OneToMany(mappedBy = "application")
 	private Set<Action> Actions;
 
+	@ManyToOne
 	private Application parent;
 	
+	@OneToMany(mappedBy="parent")
 	private Set<Application> applicationDependencies;
 	
 	//private Set<Shortcut> Shortcuts;

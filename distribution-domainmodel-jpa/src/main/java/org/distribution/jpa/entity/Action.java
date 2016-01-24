@@ -1,7 +1,14 @@
 /**
  * 
  */
-package org.distribution;
+package org.distribution.jpa.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
@@ -10,10 +17,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 abstract public class Action {
 	
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	
+	@ManyToOne(cascade = CascadeType.ALL)
 	private Application application;
 	
 	private ActionType actionType;
