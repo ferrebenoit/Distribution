@@ -22,7 +22,7 @@ public class Computer {
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
 	//@Column(name = "COMPUTER_ID")
-	private long id;
+	private Long id;
 	
 	private String name;
 	private String macAddress;
@@ -33,7 +33,7 @@ public class Computer {
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 	

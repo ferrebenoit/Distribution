@@ -12,7 +12,7 @@ dependencies {
     //compile("org.springframework.boot:spring-boot-starter-data-rest:$project.ext.springBootVersion")
     //compile("com.h2database:h2")
 	compile project(":distribution-jpa-repository")
-	compile project(":distribution-web-thymeleaf")
+	//compile project(":distribution-web-thymeleaf")
 	
     //testCompile("org.springframework.boot:spring-boot-starter-test")
 }

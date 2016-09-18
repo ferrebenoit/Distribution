@@ -1,0 +1,30 @@
+apply plugin: 'spring-boot' 
+description = 'Distribution vaadin gui'
+
+jar {
+	baseName = 'vaadingui'
+	version = '0.0.1-SNAPSHOT'
+}
+
+
+dependencies {
+	compile('org.vaadin:viritin:1.50')
+	compile('com.vaadin:vaadin-spring-boot-starter:1.0.0')
+	compile project(":distribution-domainmodel-jpa")
+	compile project(":distribution-jpa-repository")
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test') 
+}
+
+repositories {
+    maven {
+        url "http://maven.vaadin.com/vaadin-addons"
+    }
+}
+
+dependencyManagement {
+	imports { 
+		mavenBom "com.vaadin:vaadin-bom:7.6.3" 
+	}
+}
+

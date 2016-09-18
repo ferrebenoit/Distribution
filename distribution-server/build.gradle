@@ -12,7 +12,10 @@ dependencies {
     compile("com.h2database:h2")
 	compile project(":distribution-domainmodel-jpa")
 	compile project(":distribution-controller")
-	compile project(":distribution-web-thymeleaf")
+	//compile project(":distribution-web-thymeleaf")
+//	compile project(":distribution-web-ngadmin")
+//	compile project(":distribution-web-GUI")
+	compile project(":distribution-gui-vaadin")
 	
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }

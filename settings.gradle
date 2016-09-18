@@ -1,1 +1,13 @@
-include 'distribution-server', 'distribution-client', 'distribution-domainmodel', 'distribution-repository-jdbc', 'distribution-controller', 'distribution-web-ngadmin', 'distribution-web-GUI', 'distribution-rest-repository', 'distribution-jpa-repository', 'distribution-utils', 'distribution-action', 'distribution-domainmodel-jpa'
+include 'distribution-server', 
+		'distribution-client', 
+		'distribution-domainmodel', 
+		'distribution-repository-jdbc', 
+		'distribution-controller', 
+//		'distribution-web-ngadmin', 
+//		'distribution-web-GUI', 
+		'distribution-rest-repository', 
+		'distribution-jpa-repository', 
+		'distribution-utils', 
+		'distribution-action', 
+		'distribution-domainmodel-jpa',
+		'distribution-gui-vaadin'

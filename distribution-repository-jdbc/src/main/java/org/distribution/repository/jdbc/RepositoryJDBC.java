@@ -5,6 +5,7 @@ package org.distribution.repository.jdbc;
 
 import java.io.Serializable;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
@@ -13,4 +14,4 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  *
  */
 @NoRepositoryBean
-public interface RepositoryJDBC<T, ID extends Serializable> extends PagingAndSortingRepository<T, ID> {}
+public interface RepositoryJDBC<T, ID extends Serializable> extends JpaRepository<T, ID> {}
